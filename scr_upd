@@ -12,4 +12,5 @@ git push -u origin main
 cd /Users/ficko/Documents/.$current_folder
 git pull
 
+printf '%s' "replenishing permissions: "
 sudo chmod -R +x *
