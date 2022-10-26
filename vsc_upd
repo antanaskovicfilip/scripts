@@ -1,0 +1,15 @@
+#!/bin/zsh
+
+current_folder=$(basename $PWD)
+
+printf '%s' "enter a commit message: "
+read argument
+
+echo "$current_folder and $argument"
+
+git add .
+git commit -m "$argument"
+git push -u origin main
+
+cd ~/.vscode/extensions/$current_folder
+git pull

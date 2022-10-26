@@ -1,0 +1,15 @@
+#!/bin/zsh
+
+current_folder=$(basename $PWD)
+
+printf '%s' "enter the commit message: "
+read ans
+
+git add .
+git commit -m "$ans"
+git push -u origin main
+
+cd /Users/ficko/Documents/.$current_folder
+git pull
+
+sudo chmod -R +x *
