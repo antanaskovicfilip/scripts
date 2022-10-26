@@ -2,12 +2,16 @@
 
 current_folder=$(basename $PWD)
 
-printf '%s' "enter the commit message: "
+printf '%s' "commit message: "
 read ans
+
+printf '%s' "pushing changes.."
 
 git add .
 git commit -m "$ans"
 git push -u origin main
+
+printf '%s' "pulling changes to ~/Documents/.$current_folder/"
 
 cd /Users/ficko/Documents/.$current_folder
 git pull

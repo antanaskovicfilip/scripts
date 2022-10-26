@@ -2,14 +2,18 @@
 
 current_folder=$(basename $PWD)
 
-printf '%s' "enter a commit message: "
+printf '%s' "commit message: "
 read argument
 
-echo "$current_folder and $argument"
+#echo "$current_folder and $argument"
+
+printf '%s' "pushing changes.."
 
 git add .
 git commit -m "$argument"
 git push -u origin main
+
+printf '%s' "pulling changes into ~/.vscode/extensions/$current_folder/"
 
 cd ~/.vscode/extensions/$current_folder
 git pull
