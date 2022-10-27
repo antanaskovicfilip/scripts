@@ -15,5 +15,5 @@ git push -u origin main
 
 printf '%s' "pulling changes into ~/.vscode/extensions/$current_folder/"
 
-cd ~/.vscode/extensions/$current_folder
+cd /Users/ficko/.vscode/extensions/$current_folder
 git pull
