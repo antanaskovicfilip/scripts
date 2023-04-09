@@ -17,6 +17,8 @@
 
 char usage[] = "Usage:\n\tfind_file 'substring' folder";
 
+int num_found = 0;
+
 void pronadji(char *substr, char *name, char* start_folder);
 char *elong_filename (char *abs_path, char* start_folder);
 
@@ -32,6 +34,7 @@ int main (int argc, char **argv) {
       error(false, "not a dir");
 
    pronadji(*(argv+1), *(argv+2), *(argv+2));
+   printf("Files found: %d\n", num_found);
 
    exit(EXIT_SUCCESS);
 }
@@ -54,6 +57,7 @@ void pronadji (char *niska, char *name, char* start_folder) {
    if (!S_ISDIR(info.st_mode)) {
       if (S_ISREG(info.st_mode)) {
          if (strstr(name, niska) != NULL) {
+            num_found++;
             char *abs_path = NULL;
             abs_path = realpath(name, abs_path);
             char* correct_filename = elong_filename(abs_path, start_folder);
