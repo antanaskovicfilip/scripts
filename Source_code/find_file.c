@@ -33,7 +33,12 @@ int main (int argc, char **argv) {
    if (!S_ISDIR(info.st_mode))
       error(false, "not a dir");
 
-   pronadji(*(argv+1), *(argv+2), *(argv+2));
+   
+   if (strcmp(*(argv+2), ".") == 0 || strcmp(*(argv+2), "..") == 0)
+      pronadji(*(argv+1), *(argv+2), realpath(*(argv+2), NULL));
+   else
+      pronadji(*(argv+1), *(argv+2), *(argv+2));
+
    printf("Files found: %d\n", num_found);
 
    exit(EXIT_SUCCESS);
