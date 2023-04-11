@@ -4,4 +4,5 @@ Just a few scripts that I made for myself to automate otherwise boring and tedio
 - Every function in the source file will be documented and explained.
 
 ## Todo
-Nothing planned yet.
+- **rename-file-dir**: Add directory renaming
+- **rename-file-dir**: Add replacing whole strings with another string
