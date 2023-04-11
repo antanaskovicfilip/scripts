@@ -1,0 +1,17 @@
+#!/bin/sh
+
+printf '%s' "Repository local folder: "
+read local_folder
+
+printf '%s\n' "Initializing..."
+
+cd /Users/ficko/Documents/
+mkdir $local_folder
+cd $local_folder
+
+git init
+
+printf '%s\n' "Adding remote origin..."
+git remote add origin https://github.com/antanaskovicfilip/$local_folder
+
+printf '%s\n' "Done!"
