@@ -14,8 +14,9 @@
 
 git add README.md
 
-printf '%s\n' "Commit message: "
+printf '%s' "Commit message: "
 read message
+printf '\n'
 
 git commit -m "$message"
 git push -u origin main
