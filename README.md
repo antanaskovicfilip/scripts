@@ -7,3 +7,4 @@ Just a few scripts that I made for myself to automate otherwise boring and tedio
 - ***(11.04.2023.)* rename-file-dir**: Add directory renaming
 - ***(11.04.2023.)* rename-file-dir**: Add replacing whole strings with another string
 - ***(11.04.2023.)* Add comments to every script, to explain exactly what it does and how it works**
+- ***(11.04.2023.)* Fix push-readme to ask if you are in the right folder, and if you aren't, asks you which folder should you be in and then changes into that directory**
