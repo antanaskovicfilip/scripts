@@ -6,3 +6,4 @@ Just a few scripts that I made for myself to automate otherwise boring and tedio
 ## Todo
 - ***(11.04.2023.)* rename-file-dir**: Add directory renaming
 - ***(11.04.2023.)* rename-file-dir**: Add replacing whole strings with another string
+- ***(11.04.2023.)* Add comments to every script, to explain exactly what it does and how it works**
