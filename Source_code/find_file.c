@@ -39,7 +39,7 @@ int main (int argc, char **argv) {
    else
       pronadji(*(argv+1), *(argv+2), *(argv+2));
 
-   printf("Files found: %d\n", num_found);
+   printf("\nFiles found: %d\n", num_found);
 
    exit(EXIT_SUCCESS);
 }
@@ -66,7 +66,7 @@ void pronadji (char *niska, char *name, char* start_folder) {
             char *abs_path = NULL;
             abs_path = realpath(name, abs_path);
             char* correct_filename = elong_filename(abs_path, start_folder);
-            printf("%s\n", correct_filename);
+            printf("{%d}  %s\n", num_found, correct_filename);
 
             free(abs_path);
          }
