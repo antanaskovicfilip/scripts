@@ -1,0 +1,9 @@
+#!/bin/sh
+
+git clone --depth 1 https://github.com/be5invis/Iosevka && cd Iosevka
+
+read -p "enter file name: " ans
+
+cp $ans private-build-plans.toml
+
+npm install && npm run build -- ttf::iosevka-custom
